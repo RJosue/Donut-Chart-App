@@ -26,8 +26,6 @@ function DonutChart() {
             var por = 100 - porcen
             values.push(porcen)
             values.push(por)
-
-            console.log(values)
             var tot = 0;
             var accum = 0;
             var PI = Math.PI;

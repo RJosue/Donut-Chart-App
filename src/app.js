@@ -26,8 +26,8 @@ app.get('', (req, res) => {
         cy: 250,
         radius: 200,
         arcwidth: 80,
-        colors: ['#82B341', '#333333'],
-        colorFont: "#333333",
+        colors: ['#82B341', '#7F8286'],
+        colorFont: "#7F8286",
         font: "arial",
         porcen: 59
     }
