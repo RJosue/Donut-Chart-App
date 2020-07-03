@@ -3,7 +3,6 @@ const app = express()
 const hbs = require('hbs')
 const path = require('path')
 
-
 const donutChart = require('./utils/donut-chart')
 
 // Dinamic Port
