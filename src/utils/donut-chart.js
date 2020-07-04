@@ -3,18 +3,9 @@ const { createCanvas } = require('canvas');
 function DonutChart() {
     this.create = (obj) => {
         try {
-            const width = obj.width || 500
-            const heigth = obj.heigth || 500
+            var { width = 500, heigth = 500, cx = 250, cy = 250, radius = 200, arcwidth = 100, colors = ['red', '#333333'], colorFont = "#333333", font = "arial", porcen = 65 } = obj
             const canvas = createCanvas(width, heigth)
             const ctx = canvas.getContext('2d')
-            const cx = obj.cx || 250
-            const cy = obj.cy || 250
-            const radius = obj.radius || 200
-            const arcwidth = obj.arcwidth || 100
-            const colors = obj.colors || ['red', '#333333'];
-            const colorFont = obj.colorFont || "#333333"
-            const font = obj.font || "arial"
-            var porcen = obj.porcen || 100;
             const values = []
             if (porcen >= 100) {
                 porcen = 100
@@ -52,7 +43,7 @@ function DonutChart() {
             ctx.textBaseline = 'bottom';
             ctx.fillStyle = colorFont;
             ctx.font = (innerRadius) + 'px' + font;
-            ctx.fillText(values[0], cx, cy + innerRadius * .5);
+            ctx.fillText(values[0] + '%', cx, cy + innerRadius * .5);
 
             let model = {
                 success: true,

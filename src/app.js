@@ -19,16 +19,16 @@ app.use(express.static(publicDirPath))
 
 app.get('', (req, res) => {
     let model = {
-        width: 500,
-        heigth: 500,
-        cx: 250,
-        cy: 250,
-        radius: 200,
-        arcwidth: 80,
-        colors: ['#82B341', '#7F8286'],
-        colorFont: "#7F8286",
-        font: "arial",
-        porcen: 59
+        // width: 500,
+        // heigth: 500,
+        // cx: 250,
+        // cy: 250,
+        // radius: 200,
+        // arcwidth: 80,
+        // colors: ['#82B341', '#7F8286'],
+        // colorFont: "#7F8286",
+        // font: "arial",
+        // porcen: 59
     }
     let returnCanvas = new donutChart().create(model)
     res.render('index', {
