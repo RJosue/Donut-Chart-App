@@ -3,7 +3,7 @@ const { createCanvas } = require('canvas');
 function DonutChart() {
     this.create = (obj) => {
         try {
-            var { width = 500, heigth = 500, cx = 250, cy = 250, radius = 200, arcwidth = 100, colors = ['red', '#333333'], colorFont = "#333333", font = "arial", porcen = 65 } = obj
+            var { width = 500, heigth = 500, cx = 250, cy = 250, radius = 200, arcwidth = 100, colors = ['#663399', '#333333'], colorFont = "#333333", font = "arial", porcen = 65 } = obj
             const canvas = createCanvas(width, heigth)
             const ctx = canvas.getContext('2d')
             const values = []
@@ -55,11 +55,8 @@ function DonutChart() {
                 success: false,
                 error: e
             }
-            console.log(e)
             return model
         }
-
-
     }
 }
 

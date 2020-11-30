@@ -3,13 +3,13 @@ const app = express()
 const hbs = require('hbs')
 const path = require('path')
 
-const donutChart = require('./utils/donut-chart')
+const donutChart = require('./utils/donut-chart');
 
 // Dinamic Port
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 3000;
 
-const publicDirPath = path.join(__dirname, '../public')
-const viewPath = path.join(__dirname, '../templates/views')
+const publicDirPath = path.join(__dirname, '../public');
+const viewPath = path.join(__dirname, '../templates/views');
 const partialsPath = path.join(__dirname, '../templates/views/partials')
 
 app.set('view engine', 'hbs')
@@ -30,10 +30,11 @@ app.get('', (req, res) => {
         // font: "arial",
         // porcen: 59
     }
-    let returnCanvas = new donutChart().create(model)
+    // Guia de parametos
+    let returnCanvas = new donutChart().create(model);
     res.render('index', {
         returnCanvas
-    })
+    });
 })
 
 app.listen(port, () => {

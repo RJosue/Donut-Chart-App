@@ -1,17 +1,20 @@
 {
-  "name": "y",
+  "name": "donut-chart",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Application for create a data:image/png;base64 in nodeJS",
+  "main": "src/app.js",
   "scripts": {
     "start": "node src/app.js",
     "dev": "nodemon src/app.js -e js,hbs"
   },
-  "author": "",
+  "author": "RJosue",
   "license": "ISC",
   "dependencies": {
     "canvas": "^2.6.1",
     "express": "^4.17.1",
     "hbs": "^4.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
   }
 }
